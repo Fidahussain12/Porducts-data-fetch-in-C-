@@ -1,0 +1,34 @@
+using System;
+
+public class Products
+{
+    private string name;
+    private double price;
+
+    public Products(string name, double price)
+    {
+        this.name = name;
+        this.price = price;
+    }
+
+    public string GetName()
+    {
+        return name;
+    }
+
+    public double GetPrice()
+    {
+        return price;
+    }
+
+    public string Display()
+    {
+        return $"Name: {this.GetName()}, Price: ${this.GetPrice():0.00}";
+    }
+
+    public static void Main()
+    {
+        Products p = new Products("Laptop", 999.99);
+        Console.WriteLine(p.Display());
+    }
+}
